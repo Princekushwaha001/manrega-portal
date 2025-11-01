@@ -1,47 +1,15 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Virtual Environment
-venv/
-ENV/
+# Testing
+/coverage
 
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Build output
+# Production
 /build
 /dist
-/.next/
+.next/
 /out/
 
 # Debug logs
@@ -49,14 +17,18 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Editor directories and files
+# Environment variables
+.env*.local
+
+# IDE and Editor
 .idea/
 .vscode/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.swp
+*.swo
 
 # OS generated files
 .DS_Store
@@ -66,3 +38,17 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Local development
+.cache/
+.temp/
+.tmp/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
