@@ -21,8 +21,8 @@ wheels/
 *.egg
 
 # Virtual Environment
-venv/
-ENV/
+**/venv/
+**/ENV/
 
 # Database files
 *.db
@@ -58,3 +58,26 @@ local_settings.py
 
 # Ignore the SQLite database file
 mgnrega_cache.db
+
+# Node modules
+node_modules/
+
+# Streamlit cache
+**/.streamlit/
+**/__pycache__/
+
+# Large package files
+**/site-packages/numpy/
+**/site-packages/pandas/
+**/site-packages/matplotlib/
+**/site-packages/scipy/
+**/site-packages/sklearn/
+**/site-packages/pyarrow/
+**/site-packages/torch/
+**/site-packages/tensorflow/
+**/site-packages/plotly/
+
+# Ignore all .pyc, .pyo and .pyd files
+**/*.pyc
+**/*.pyo
+**/*.pyd

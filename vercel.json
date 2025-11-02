@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "frontend/requirements.txt",
+      "use": "@vercel/python"
+    },
+    {
       "src": "frontend/app.py",
       "use": "@vercel/python"
     }
