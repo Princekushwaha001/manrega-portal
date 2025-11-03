@@ -9,6 +9,9 @@ import base64
 
 API_BASE_URL = "http://localhost:8000"
 
+import os
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
+
 st.set_page_config(
     page_title="MGNREGA Data Portal | मनरेगा डेटा पोर्टल",
     page_icon="🏛️",
