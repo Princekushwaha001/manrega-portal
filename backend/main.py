@@ -50,6 +50,24 @@ RATE_LIMIT_WINDOW = 60
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For production, replace "*" with your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+import os
+import sys
+from pathlib import Path
+
+# Add the backend directory to Python path
+backend_dir = str(Path(__file__).parent.absolute())
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
 
 # Rate limiter
 class RateLimiter:

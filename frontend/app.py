@@ -7,10 +7,17 @@ import plotly.graph_objects as go
 from datetime import datetime
 import base64
 
-API_BASE_URL = "http://localhost:8000"
+#API_BASE_URL = "http://localhost:8000"
 
 import os
-API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Use the environment variable or fallback to localhost
+API_BASE_URL = os.getenv("REACT_APP_API_BASE_URL", "http://localhost:8000")
+
 
 st.set_page_config(
     page_title="MGNREGA Data Portal | मनरेगा डेटा पोर्टल",
